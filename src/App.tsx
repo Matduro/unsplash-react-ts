@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //import { fetchUnsplash } from "./API";
 // Types
 // import { IImage } from "./API";
@@ -8,7 +8,7 @@ export type IImage = {
 };
 
 const fetchUnsplash = async (): Promise<IImage | any> => {
-  const endpoint = "https://picsum.photos/200/300";
+  const endpoint = "https://picsum.photos/600/600";
   return await fetch(endpoint).then((res) => res.url);
 };
 
@@ -19,18 +19,28 @@ const App = () => {
     fetchUnsplash().then((res) => setUnspashImage(res));
   };
 
+  useEffect(() => {
+    newPicture();
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={unsplashImage} className="App-image" alt="unsplash" />
-        <p>This picture is brought to you by: Unsplash.</p>
+        <p>
+          This picture is brought to you by Unsplash. To Get a new picture,
+          click the button below:
+        </p>
+        <button className="next" onClick={newPicture}>
+          New Picture
+        </button>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://unsplash.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hello World!
+          Unsplash
         </a>
       </header>
     </div>
