@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import backgroundPic from "./images/keith-misner-unsplash.jpg";
 
 export const GlobalStyle = createGlobalStyle`
