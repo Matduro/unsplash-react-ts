@@ -11,7 +11,9 @@ export const Unsplash = () => {
   const [unsplashImage, setUnspashImage] = useState("");
 
   const newPicture = async () => {
-    fetchUnsplash().then((res) => setUnspashImage(res));
+    fetchUnsplash()
+      .then((res) => setUnspashImage(res))
+      .catch((e) => console.log(e));
   };
 
   useEffect(() => {
