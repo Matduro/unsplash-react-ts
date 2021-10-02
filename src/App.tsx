@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from "react";
-//import { fetchUnsplash } from "./API";
+import { fetchUnsplash } from "./API";
+// Components
+import Button from "@mui/material/Button";
 // Types
-// import { IImage } from "./API";
-
-export type IImage = {
-  url?: string;
-};
-
-const fetchUnsplash = async (): Promise<IImage | any> => {
-  const endpoint = "https://picsum.photos/600/600";
-  return await fetch(endpoint).then((res) => res.url);
-};
+import { IImage } from "./API";
+// Styles
+import { Wrapper } from "./App.styles";
 
 const App = () => {
   const [unsplashImage, setUnspashImage] = useState("");
@@ -24,26 +19,24 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={unsplashImage} className="App-image" alt="unsplash" />
-        <p>
-          This picture is brought to you by Unsplash. To Get a new picture,
-          click the button below:
-        </p>
-        <button className="next" onClick={newPicture}>
-          New Picture
-        </button>
-        <a
-          className="App-link"
-          href="https://unsplash.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Unsplash
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <img src={unsplashImage} className="App-image" alt="unsplash" />
+      <p>
+        This picture is brought to you by Unsplash. To Get a new picture, click
+        the button below:
+      </p>
+      <Button variant="contained" onClick={newPicture}>
+        New Picture
+      </Button>
+      <a
+        className="unsplash-link"
+        href="https://unsplash.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Unsplash
+      </a>
+    </Wrapper>
   );
 };
 
