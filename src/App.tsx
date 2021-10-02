@@ -1,16 +1,23 @@
 import React, { useState } from "react";
-import { fetchUnsplash } from "./API";
+//import { fetchUnsplash } from "./API";
 // Types
-import { IImage } from "./API";
+// import { IImage } from "./API";
+
+export type IImage = {
+  url?: string;
+};
+
+const fetchUnsplash = async (): Promise<IImage | any> => {
+  const endpoint = "https://picsum.photos/200/300";
+  return await fetch(endpoint).then((res) => res.url);
+};
 
 const App = () => {
   const [unsplashImage, setUnspashImage] = useState("");
 
-  fetchUnsplash();
-
-  // .then((res) => {
-  //   setUnspashImage(res);
-  // });
+  const newPicture = async () => {
+    fetchUnsplash().then((res) => setUnspashImage(res));
+  };
 
   return (
     <div className="App">
