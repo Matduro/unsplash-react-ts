@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
-  width: 40%;
+  width: 35%;
 
   img {
     max-width: 600px;
@@ -15,17 +15,18 @@ export const Wrapper = styled.div`
   }
 
   p {
-    margin-left: 20px;
+    margin-left: 5em;
     color: white;
     text-align: center;
+    width: 60%;
   }
 
   Button {
-    margin-left: 14em;
+    margin-left: 13em;
   }
 
   a {
-    margin-left: 14.5em;
+    margin-left: 13.5em;
     color: white;
   }
 `;
