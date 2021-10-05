@@ -10,23 +10,14 @@ export const Wrapper = styled.div`
   img {
     max-width: 600px;
     max-height: 600px;
-    height: auto;
-    width: auto;
+  }
+
+  .unplash-actions {
+    width: 80%;
   }
 
   p {
-    margin-left: 5em;
     color: white;
-    text-align: center;
-    width: 60%;
-  }
-
-  Button {
-    margin-left: 13em;
-  }
-
-  a {
-    margin-left: 13.5em;
-    color: white;
+    font-weight: 900;
   }
 `;

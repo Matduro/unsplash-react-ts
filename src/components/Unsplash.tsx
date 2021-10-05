@@ -2,17 +2,18 @@ import React, { useState, useEffect } from "react";
 import { fetchUnsplash } from "../API";
 // Components
 import Button from "@mui/material/Button";
+import Image from "material-ui-image";
 // Styles
 import { Wrapper } from "./Unsplash.styles";
 // Types
 import { IImage } from "../API";
 
 export const Unsplash = () => {
-  const [unsplashImage, setUnspashImage] = useState("");
+  const [unsplashImage, setUnsplashImage] = useState("");
 
   const newPicture = async () => {
     fetchUnsplash()
-      .then((res) => setUnspashImage(res))
+      .then((res) => setUnsplashImage(res))
       .catch((e) => console.log(e));
   };
 
@@ -22,23 +23,14 @@ export const Unsplash = () => {
 
   return (
     <Wrapper>
-      <img src={unsplashImage} className="App-image" alt="unsplash" />
-      <p>
-        This picture is brought to you by Unsplash. To Get a new picture, click
-        the button below:
-      </p>
-      <Button variant="contained" onClick={newPicture}>
-        New Picture
-      </Button>
-      <br />
-      <a
-        className="unsplash-link"
-        href="https://unsplash.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Unsplash
-      </a>
+      <Image src={unsplashImage} />
+      {/* <img src={unsplashImage} className="App-image" alt="unsplash" /> */}
+      <div className="unplash-actions">
+        <p>To Get a new picture, click the button below:</p>
+        <Button variant="contained" onClick={newPicture}>
+          New Picture
+        </Button>
+      </div>
     </Wrapper>
   );
 };

@@ -7,14 +7,14 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    // background-image: url(${backgroundPic});
-    // background-size: cover;
-    // background: radial-gradient(circle, white, black);
-    background-color: #837960;
-    background-image: linear-gradient(
-      to bottom, transparent, #837960
-    ), url(${backgroundPic});
-    background-repeat: no-repeat;
+    background-image: url(${backgroundPic});
     background-size: cover;
+
+    // background-color: #837960;
+    // background-image: linear-gradient(
+    //   to bottom, transparent, #837960
+    // ), url(${backgroundPic});
+    // background-repeat: no-repeat;
+    // background-size: cover;
   }
 `;
