@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 // Components
 import { Unsplash } from "./components/Unsplash";
+import NavBar from "./components/NavBar";
 // Types
 
 // Styles
@@ -26,6 +27,7 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
+      <NavBar />
       {/* <Unsplash /> */}
       <Switch>
         <Route path="/unsplash" exact={true} component={Unsplash} />
