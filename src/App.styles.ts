@@ -18,3 +18,9 @@ export const GlobalStyle = createGlobalStyle`
     // background-size: cover;
   }
 `;
+
+export const Wrapper = styled.div`
+  max-width: 300px;
+  max-height: 200px;
+  color: white;
+`;

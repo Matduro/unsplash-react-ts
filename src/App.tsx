@@ -12,7 +12,8 @@ import NavBar from "./components/NavBar";
 // Types
 
 // Styles
-import { GlobalStyle } from "./App.styles";
+import { GlobalStyle, Wrapper } from "./App.styles";
+import kenobi from "./images/hello-there-general-kenobi.gif";
 
 // Temporarily set as any until more components are built
 const withRouter = (WrappedComponent: any) => (props: any) => {
@@ -30,11 +31,17 @@ const App = () => {
       <GlobalStyle />
       <NavBar />
       <Switch>
-        <Route path="/unsplash" exact={true} component={Unsplash} />
+        <Route path="/" exact={true}>
+          <Wrapper>
+            <h3>Click on the NavBar items to navigate</h3>
+          </Wrapper>
+        </Route>
+        <Route path="/unsplash" component={Unsplash} />
         <Route path="/shopping" component={Shopping} />
         <Route path="/hello">
-          <img src="https://i.imgur.com/ApjVnee.mp4" alt="Hello There" />
-          <h1>Stay tuned for new features</h1>
+          <Wrapper>
+            <img src={kenobi} alt="Hello There" />
+          </Wrapper>
         </Route>
       </Switch>
     </>
