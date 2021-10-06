@@ -17,7 +17,7 @@ export const fetchUnsplash = async (): Promise<IImage | any> => {
   return await fetch(endpoint).then((res) => res.url);
 };
 
-export type CartItemType = {
+export type ICartItemType = {
   id: number;
   category: string;
   description: string;
@@ -27,7 +27,7 @@ export type CartItemType = {
   amount: number;
 };
 
-const getProducts = async (): Promise<CartItemType[]> => {
+export const getProducts = async (): Promise<ICartItemType[]> => {
   return await (await fetch("http://fakestoreapi.com/products")).json();
 };
 

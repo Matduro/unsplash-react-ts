@@ -27,14 +27,14 @@ const NavBar = () => {
               >
                 Images
               </Link>
-              <Link to="/hello" className="nav-links px-2 text-decoration-none">
-                Hello
-              </Link>
               <Link
-                to="/coincap"
+                to="/shopping"
                 className="nav-links px-2 text-decoration-none"
               >
-                CoinCap
+                Shopping
+              </Link>
+              <Link to="/hello" className="nav-links px-2 text-decoration-none">
+                Hello
               </Link>
             </div>
           </div>
