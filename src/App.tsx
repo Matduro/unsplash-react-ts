@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 // Components
 import { Unsplash } from "./components/Unsplash";
+import CoinCap from "./components/CoinCap";
 import NavBar from "./components/NavBar";
 // Types
 
@@ -28,12 +29,12 @@ const App = () => {
     <>
       <GlobalStyle />
       <NavBar />
-      {/* <Unsplash /> */}
       <Switch>
         <Route path="/unsplash" exact={true} component={Unsplash} />
         <Route path="/hello">
           <h1>HELLO THERE!</h1>
         </Route>
+        <Route path="/coincap" component={CoinCap} />
       </Switch>
     </>
   );

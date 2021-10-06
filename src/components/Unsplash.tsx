@@ -34,5 +34,3 @@ export const Unsplash = () => {
     </Wrapper>
   );
 };
-
-export default Unsplash;

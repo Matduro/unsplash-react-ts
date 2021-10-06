@@ -30,8 +30,11 @@ const NavBar = () => {
               <Link to="/hello" className="nav-links px-2 text-decoration-none">
                 Hello
               </Link>
-              <Link to="/" className="nav-links px-2 text-decoration-none">
-                Extra
+              <Link
+                to="/coincap"
+                className="nav-links px-2 text-decoration-none"
+              >
+                CoinCap
               </Link>
             </div>
           </div>
